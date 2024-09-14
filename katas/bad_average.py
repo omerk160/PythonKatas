@@ -2,7 +2,7 @@ def bad_average(a, b, c):
     """
     Calculates the average of three numbers.
     """
-    return a + b + c / 3
+    return int((a + b + c) / 3)
 
 
 result = bad_average(3, 6, 9)

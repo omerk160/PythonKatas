@@ -1,8 +1,6 @@
 def get_century(year):
-    """
-    Returns the century of the given year.
-    """
-    # Implement the function to return the correct century.
+    century = (year // 100) + (1 if year % 100 != 0 else 0)
+    return century
 
 
 result = get_century(1786)

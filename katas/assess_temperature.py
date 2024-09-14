@@ -1,8 +1,12 @@
 def assess_temperature(temp):
-    """
-    Returns 'Hot' if the temperature is above 30 degrees, 'Cold' if below 15 degrees, and 'Moderate' otherwise.
-    """
 
+    if temp >=30:
+        return 'Hot'
+    elif temp < 15:
+        return 'Cold'
+    #else if temp > 15 and temp < 30:
+    else:
+        return 'Moderate'
 
 print(assess_temperature(35))  # 'Hot' expected
 print(assess_temperature(10))  # 'Cold' expected

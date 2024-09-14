@@ -1,7 +1,8 @@
 def is_even(number):
-    """
-    Checks if the given number is even.
-    """
+    if (number % 2 == 0):
+        return True
+    else:
+        return False
 
 
 result_1 = is_even(4)

@@ -1,11 +1,11 @@
-def get_sum(x y,)
-   return result
+def get_sum(x,y):
     result = x + y
+    return result
 
 
 
-print(print_sum(3, 5))  # 8 expected
-print(print_sum(10, 2))  # 12 expected
+print(get_sum(3, 5))  # 8 expected
+print(get_sum(10, 2))  # 12 expected
 
 """
 To complete this exercise:

@@ -1,7 +1,5 @@
 def get_seconds(days):
-    """
-    Converts the given number of days into seconds.
-    """
+    return (days * 24 * 60 * 60)
 
 
 

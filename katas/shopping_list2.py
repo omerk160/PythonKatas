@@ -1,7 +1,7 @@
 def build_shopping_list(initial_items, new_item):
-    """
-    Addd new_item to the initial_items list.
-    """
+
+    initial_items.append(new_item)
+    return initial_items
 
 
 current_list = ["milk", "bread"]

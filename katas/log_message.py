@@ -1,11 +1,13 @@
 def log_message(message, log_type):
-    """
-    Logs a message to the console with a specific log type (e.g., 'INFO', 'WARNING', 'ERROR').
-    """
+
     if log_type == "INFO":
         print(f"[INFO]: {message}")
-
-    # TODO complete the rest...
+    elif log_type == "WARNING":
+        print(f"[WARNING]: {message}")
+    elif log_type == "ERROR":
+        print(f"[ERROR]: {message}")
+    else:
+        print(f"[UNKNOWN]: {message}")
 
 
 log_message("System started", "INFO")   # Expected output: [INFO]: System started

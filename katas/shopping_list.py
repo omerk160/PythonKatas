@@ -1,7 +1,6 @@
 def is_shopping_list_complete(shopping_list):
-    """
-    Returns True if the shopping list has at least 3 items, otherwise False.
-    """
+
+    return len(shopping_list) >= 3
 
 
 list_1 = ["milk", "eggs"]

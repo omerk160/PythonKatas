@@ -15,8 +15,25 @@ _Kata_ is a Japanese word (型 or 形) meaning "form". It refers to a detailed c
 > - Click double SHIFT to search katas files in PyCharm.
 
 
-- [ ] `hello_world.py`
-- [ ] `hello_world2.py`
+- [X] `hello_world.py`
+- [X] `hello_world.py`
+- [X] `hello_world2.py`
+- [X] `numbers_division.py`
+- [X] `personalized_hello_world.py`
+- [X] `age_message_fix.py`
+- [X] `get_seconds.py`
+- [X] `get_century.py`
+- [X] `bad_average.py`
+- [X] `calculator1.py`
+- [X] `calculator2.py`
+- [X] `tax_calc.py`
+- [X] `bad_function.py`
+- [X] `fill_a_cab.py`
+- [X] `time_convertor.py`
+- [X] `is_even.py`
+- [X] `can_drive.py`
+- [X] `can_drive2.py`
+- [X] `assess_temperature.py` `hello_world2.py`
 - [ ] `numbers_division.py`
 - [ ] `personalized_hello_world.py`
 - [ ] `age_message_fix.py`

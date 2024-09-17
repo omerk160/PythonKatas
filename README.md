@@ -33,9 +33,9 @@ _Kata_ is a Japanese word (型 or 形) meaning "form". It refers to a detailed c
 - [X] `is_even.py`
 - [X] `can_drive.py`
 - [X] `can_drive2.py`
-- [X] `assess_temperature.py` `hello_world2.py`
-- [ ] `numbers_division.py`
-- [ ] `personalized_hello_world.py`
+- [X] `assess_temperature.py`
+- [X] `numbers_division.py`
+- [X] `personalized_hello_world.py`
 - [ ] `age_message_fix.py`
 - [ ] `get_seconds.py`
 - [ ] `get_century.py`

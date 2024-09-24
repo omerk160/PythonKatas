@@ -1,8 +1,9 @@
+from operator import truediv
+
+
 def is_subscriber_matching(subscriber_name, actual_name):
-    """
-    Checks if the subscriber's name matches the actual name without care about case-insensitivity.
-    Returns True if they match, otherwise False.
-    """
+
+    return str.lower(subscriber_name) == str.lower(actual_name)
 
 
 result = is_subscriber_matching("John Doe", "john doe")

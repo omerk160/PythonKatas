@@ -1,7 +1,10 @@
 def split_full_name(full_name):
-    """
-    Splits a full name into first and last name and returns them as a tuple.
-    """
+    # Split the full name by space
+    names = full_name.split()
+
+    # Return the first and last name as a tuple
+    # Assuming the name contains exactly two parts (first and last)
+    return names[0], names[1]
 
 
 full_name = "Alice Johnson"

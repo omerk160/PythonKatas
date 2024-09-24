@@ -1,10 +1,12 @@
 def start_end(text, n, m):
-    """
-    The function returns the first 'n' characters from the string text,
-    concatenated with the last 'm' characters from the string.
+    if n < 0 or m < 0 or n > len(text) or m > len(text):
+        return 'ERROR'
 
-    If 'n' or 'm' are invalid (negative or larger than text length), return an empty string.
-    """
+    start_part = text[:n]
+    end_part = text[-m:]
+
+    # Concatenate the two parts
+    return start_part + end_part
 
 
 text = 'Elvis has left the building'

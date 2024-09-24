@@ -2,17 +2,24 @@ def find_min(numbers):
     """
     Finds the minimum number in a list without using the built-in min() function.
     """
-    min_value = numbers[0]  # assume the 1st element is the minimum
-    # for loop comes here ....
-        # update min_value in the loop body
+    min_value = numbers[0]
+    for number in numbers:
+        # Update min_value if a smaller number is found
+        if number < min_value:
+            min_value = number
 
     return min_value
 
 
 def find_max(numbers):
-    """
-    Finds the maximum number in a list without using the built-in max() function.
-    """
+
+    max_value = numbers[0]
+    for number in numbers:
+        # Update max_value if a larger number is found
+        if number > max_value:
+            max_value = number
+
+    return max_value
 
 
 

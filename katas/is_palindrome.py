@@ -1,8 +1,5 @@
 def is_palindrome(number):
-    """
-    Checks if a given number is a palindrome.
-    A number is a palindrome if it reads the same forwards and backwards.
-    """
+    return str(number) == str(number)[::-1]
 
 
 result = is_palindrome(12321)

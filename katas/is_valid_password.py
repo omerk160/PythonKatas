@@ -1,7 +1,16 @@
 def is_valid_password(password):
-    """
-    Checks if the given password meets the required criteria.
-    """
+    if len(password) < 8:
+        return False
+    #Compare lower and upper strings to the original string
+    if password.upper() == password:
+        #.upper() turns all string to CAPS
+        #When checking if the capped version matches the original, this checks if the original string was capped, thus not answering requirements.
+        return False
+    if password.lower() == password:
+        #.upper() turns all string to CAPS
+        #When checking if the capped version matches the original, this checks if the original string was capped, thus not answering requirements.
+        return False
+    return True
 
 
 # Test cases

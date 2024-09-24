@@ -1,7 +1,5 @@
 def num_of_digits(number):
-    """
-    Returns the number of digits in the given integer.
-    """
+    return len(str(number))
 
 
 # Test cases

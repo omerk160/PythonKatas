@@ -4,9 +4,15 @@ def is_prime(number):
     A prime number is an integer greater than 1 that has no divisors
     other than 1 and itself.
     """
-    for i in range(number):
-        ...  # TODO complete the loop body
+    if number <= 1:
+        return False
 
+    # Check divisibility from 2 to sqrt(number)
+    for i in range(2, int(number**0.5) + 1):
+        if number % i == 0:
+            return False
+
+    return True
 
 number = 11
 result = is_prime(number)

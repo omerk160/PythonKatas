@@ -64,13 +64,13 @@ _Kata_ is a Japanese word (型 or 形) meaning "form". It refers to a detailed c
 - [X] `total_expense.py`
 - [X] `min_max.py`
 - [X] `mailing_list2.py`
-- [ ] `is_prime.py`
-- [ ] `list_diff.py`
-- [ ] `under_18.py`
-- [ ] `even_sublist.py`
-- [ ] `sum_even_numbers.py`
-- [ ] `app_health.py`
-- [ ] `max_difference.py`
-- [ ] `name_pair.py`
-- [ ] `validate_age.py`
+- [X] `is_prime.py`
+- [X] `list_diff.py`
+- [X] `under_18.py`
+- [X] `even_sublist.py`
+- [X] `sum_even_numbers.py`
+- [X] `app_health.py`
+- [X] `max_difference.py`
+- [X] `name_pair.py`
+- [X] `validate_age.py`
 

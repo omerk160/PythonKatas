@@ -4,6 +4,14 @@ def list_diff(numbers):
     between the current element and its predecessor.
     The first element is left unchanged.
     """
+    result = [numbers[0]]
+
+    # Iterate over the list starting from the second element
+    for i in range(1, len(numbers)):
+        # Append the difference between the current element and its predecessor
+        result.append(numbers[i] - numbers[i - 1])
+
+    return result
 
 
 numbers = [10, 20, 15, 25, 30]

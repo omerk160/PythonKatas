@@ -4,7 +4,7 @@ def sum_even_numbers(lst):
     However, there is an error in the loop implementation. Fix it so that the function works correctly.
     """
     total = 0
-    for i in range(lst):
+    for i in range(len(lst)):
         if lst[i] % 2 == 0:
             total += lst[i]
     return total

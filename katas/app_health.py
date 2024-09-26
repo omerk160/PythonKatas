@@ -7,6 +7,8 @@ def check_server_response(status_code):
     the application health is set to False.
     """
     global app_healthy
+    if status_code != 200:
+        app_healthy = False
 
 
 
@@ -15,6 +17,7 @@ def reset_health_check():
     Resets the application health to True, simulating a health recovery or manual reset.
     """
     global app_healthy
+    app_healthy = True
 
 
 print(f"Initial app health: {app_healthy}")  # Expected: True

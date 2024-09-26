@@ -4,7 +4,13 @@ def generate_name_pairs(names):
     where each tuple contains all possible pairs of names.
     """
 
+    pairs=[]
+    for i in range(len(names)):
+        # Inner loop pairs it with the following names
+        for j in range(i + 1, len(names)):
+            pairs.append((names[i], names[j]))  # Create a tuple of the pair and add it to the list
 
+    return pairs
 
 name_list = ["Alice", "Bob", "Charlie"]
 all_pairs = generate_name_pairs(name_list)

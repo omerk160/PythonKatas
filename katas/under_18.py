@@ -2,6 +2,15 @@ def count_under_18(ages):
     """
     Returns the count of elements in the list that are less than 18.
     """
+    count = 0
+    for i in range(len(ages)):
+        if ages[i] < 18:
+            count = count +1
+            print(ages[i])
+
+
+
+
 
 
 ages1 = [25, 34, 17, 16, 40, 15, 28]

@@ -1,3 +1,6 @@
+from katas.is_prime import number
+
+
 def even_sublist(numbers):
     """
     Returns a new list containing only the even numbers from the provided list.
@@ -5,6 +8,12 @@ def even_sublist(numbers):
     :param numbers: list of integers
     :return: list of even integers
     """
+    list = []
+    for i in range (len(numbers)):
+        if numbers[i] % 2 ==0:
+            list.append(numbers[i])
+
+    return list
 
 
 

@@ -1,9 +1,15 @@
+from imghdr import test_xbm
+
+
 def is_unique_str(text):
     """
     This function checks if all characters in the provided string are unique.
     If the string contains any repeated characters, it returns False.
     Otherwise, it returns True.
     """
+    if len(text) == 0:
+        return None
+    return len(text) == len(set(text))
 
 
 print(is_unique_str("abcdef"))  # Expected output: True

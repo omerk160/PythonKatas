@@ -2,6 +2,12 @@ def convert_currency(amount, from_currency, to_currency, exchange_rates):
     """
     Converts an amount from one currency to another using the provided exchange rates.
     """
+    base_amount = amount / exchange_rates[from_currency]
+
+    # Convert the base amount to the target currency
+    converted_amount = base_amount * exchange_rates[to_currency]
+
+    return converted_amount
 
 
 # Example exchange rates (amounts are in terms of 1 base currency unit)

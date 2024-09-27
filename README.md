@@ -74,23 +74,23 @@ _Kata_ is a Japanese word (型 or 形) meaning "form". It refers to a detailed c
 - [X] `name_pair.py`
 - [X] `validate_age.py`
 
-- [ ] `is_unique_str.py`     
-- [ ] `reformat_phone.py`    
-- [ ] `swap_in_list.py`      
-- [ ] `partial_list.py`      
-- [ ] `lottery_guess.py`     
-- [ ] `summarize_scores.py`  
-- [ ] `all_positive.py`      
-- [ ] `long_str.py`          
-- [ ] `currency_convert.py`  
-- [ ] `get_department.py'`   
-- [ ] `course_enrollment.py` 
-- [ ] `contacts.py`          
-- [ ] `phone_lookup.py`      
-- [ ] `fix_movie_review.py`  
-- [ ] `overweight.py`        
-- [ ] `find_item_price.py`   
-- [ ] `check_identity.py`    
-- [ ] `book_your_seat.py`    
-- [ ] `boarding_pass_code.py`
-- [ ] `process_payment.py`   
+- [X] `is_unique_str.py`     
+- [X] `reformat_phone.py`    
+- [X] `swap_in_list.py`      
+- [X] `partial_list.py`      
+- [X] `lottery_guess.py`     
+- [X] `summarize_scores.py`  
+- [X] `all_positive.py`      
+- [X] `long_str.py`          
+- [X] `currency_convert.py`  
+- [X] `get_department.py'`   
+- [X] `course_enrollment.py` 
+- [X] `contacts.py`          
+- [X] `phone_lookup.py`      
+- [X] `fix_movie_review.py`  
+- [X] `overweight.py`        
+- [X] `find_item_price.py`   
+- [X] `check_identity.py`    
+- [X] `book_your_seat.py`    
+- [X] `boarding_pass_code.py`
+- [X] `process_payment.py`   

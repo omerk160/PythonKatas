@@ -8,6 +8,14 @@ def partial_list(input_list, fraction):
     If the input_list is [1, 2, 3, 4, 5] and fraction is 0.4,
     the output should be [1, 2].
     """
+    if fraction <= 0 or fraction > 1:
+        return None
+
+    x = int(len(input_list) * fraction)
+
+    # Return the slice of the list
+    return input_list[:x]
+
 
 
 print(partial_list([1, 2, 3, 4, 5], 0.4))  # Expected output: [1, 2]

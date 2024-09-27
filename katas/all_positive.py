@@ -1,8 +1,11 @@
+from katas.is_prime import number
+
+
 def all_elements_meet_condition(numbers):
     """
     Checks if all elements in the given list of numbers are positive.
     """
-
+    return all(num > 0 for num in numbers)
 
 print(all_elements_meet_condition([1, 2, 3, 4, 5]))   # Expected output: True
 print(all_elements_meet_condition([1, -2, 3, 4, 5]))  # Expected output: False

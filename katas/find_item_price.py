@@ -3,6 +3,12 @@ def find_item_price(items_dict, category, item):
     This function takes a dictionary of categories, where each category is a dict of items, and returns the price of
     the specified item within the specified category, or None if the item or category doesn't exist.
     """
+    if category in items_dict:
+        if item in items_dict[category]:
+            return items_dict[category][item]
+
+
+    return None
 
 
 items = {

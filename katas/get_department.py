@@ -4,6 +4,8 @@ def get_employee_department(employee_dict, employee_id):
     If the employee_id does not exist in the dictionary, return 'Unknown'.
     """
 
+    return employees[employee_id]
+
 
 employees = {
     101: 'Sales',

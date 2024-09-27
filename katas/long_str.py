@@ -2,6 +2,7 @@ def long_str(words, length):
     """
     Checks if any string in the given list of words has the specified length.
     """
+    return any(len(word) == length for word in words)
 
 
 print(long_str(["hello", "world", "python"], 5))  # Expected output: True

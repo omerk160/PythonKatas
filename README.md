@@ -15,94 +15,92 @@ _Kata_ is a Japanese word (型 or 形) meaning "form". It refers to a detailed c
 > - Click double SHIFT to search katas files in PyCharm.
 
 
-- [ ] `hello_world.py`
-- [ ] `hello_world2.py`
-- [ ] `numbers_division.py`
-- [ ] `personalized_hello_world.py`
-- [ ] `age_message_fix.py`
-- [ ] `get_seconds.py`
-- [ ] `get_century.py`
-- [ ] `bad_average.py`
-- [ ] `calculator1.py`
-- [ ] `calculator2.py`
-- [ ] `tax_calc.py`
-- [ ] `bad_function.py`
-- [ ] `fill_a_cab.py`
-- [ ] `time_convertor.py`
-- [ ] `is_even.py`
-- [ ] `can_drive.py`
-- [ ] `can_drive2.py`
-- [ ] `assess_temperature.py`
+- [X] `hello_world.py`
+- [X] `numbers_division.py`
+- [X] `personalized_hello_world.py`
+- [X] `age_message_fix.py`
+- [X] `get_seconds.py`
+- [X] `get_century.py`
+- [X] `bad_average.py`
+- [X] `calculator1.py`
+- [X] `calculator2.py`
+- [X] `tax_calc.py`
+- [X] `bad_function.py`
+- [X] `fill_a_cab.py`
+- [X] `time_convertor.py`
+- [X] `is_even.py`
+- [X] `can_drive.py`
+- [X] `can_drive2.py`
+- [X] `assess_temperature.py`
 
-- [ ] `my_abs.py`
-- [ ] `shopping_list.py`
-- [ ] `last_one.py`
-- [ ] `sandwich_ingredients.py`
-- [ ] `every_second_word.py`
-- [ ] `recent_messages.py`
-- [ ] `get_username.py`
-- [ ] `shopping_list2.py`
-- [ ] `log_message.py`
-- [ ] `mailing_list.py`
-- [ ] `grader.py`
-- [ ] `find_student.py`
-- [ ] `is_word_absent.py`
-- [ ] `is_valid_password`
-- [ ] `is_earlier.py`
-- [ ] `num_of_digits.py`
-- [ ] `is_palindrome.py`
-- [ ] `has_pattern.py`
+- [X] `my_abs.py`
+- [X] `shopping_list.py`
+- [X] `last_one.py`
+- [X] `sandwich_ingredients.py`
+- [X] `every_second_word.py`
+- [X] `recent_messages.py`
+- [X] `get_username.py`
+- [X] `shopping_list2.py`
+- [X] `log_message.py`
+- [X] `mailing_list.py`
+- [X] `grader.py`
+- [X] `find_student.py`
+- [X] `is_word_absent.py`
+- [X] `is_valid_password`
+- [X] `is_earlier.py`
+- [X] `num_of_digits.py`
+- [X] `is_palindrome.py`
+- [X] `has_pattern.py`
 
-- [ ] `is_subscriber_matching.py`
-- [ ] `get_first_n_words.py`
-- [ ] `clean_text.py`
-- [ ] `get_user_info.py`
-- [ ] `fraction_of_float.py`
-- [ ] `start_end.py`
-- [ ] `verbing.py`
-- [ ] `print_list_elements.py`
-- [ ] `total_expense.py`
-- [ ] `min_max.py`
-- [ ] `mailing_list2.py`
-- [ ] `is_prime.py`
-- [ ] `list_diff.py`
-- [ ] `under_18.py`
-- [ ] `even_sublist.py`
-- [ ] `sum_even_numbers.py`
-- [ ] `app_health.py`
-- [ ] `max_difference.py`
-- [ ] `name_pair.py`
-- [ ] `validate_age.py`
+- [X] `is_subscriber_matching.py`
+- [X] `get_first_n_words.py`
+- [X] `clean_text.py`
+- [X] `get_user_info.py`
+- [X] `fraction_of_float.py`
+- [X] `start_end.py`
+- [X] `verbing.py`
+- [X] `print_list_elements.py`
+- [X] `total_expense.py`
+- [X] `min_max.py`
+- [X] `mailing_list2.py`
+- [X] `is_prime.py`
+- [X] `list_diff.py`
+- [X] `under_18.py`
+- [X] `even_sublist.py`
+- [X] `sum_even_numbers.py`
+- [X] `app_health.py`
+- [X] `max_difference.py`
+- [X] `name_pair.py`
+- [X] `validate_age.py`
 
-- [ ] `is_unique_str.py`     
-- [ ] `reformat_phone.py`    
-- [ ] `swap_in_list.py`      
-- [ ] `partial_list.py`      
-- [ ] `lottery_guess.py`     
-- [ ] `summarize_scores.py`  
-- [ ] `all_positive.py`      
-- [ ] `long_str.py`          
-- [ ] `currency_convert.py`  
-- [ ] `get_department.py'`   
-- [ ] `course_enrollment.py` 
-- [ ] `contacts.py`          
-- [ ] `phone_lookup.py`      
-- [ ] `fix_movie_review.py`  
-- [ ] `overweight.py`        
-- [ ] `find_item_price.py`   
-- [ ] `check_identity.py`    
-- [ ] `book_your_seat.py`    
-- [ ] `boarding_pass_code.py`
-- [ ] `process_payment.py`
+- [X] `is_unique_str.py`     
+- [X] `reformat_phone.py`    
+- [X] `swap_in_list.py`      
+- [X] `partial_list.py`      
+- [X] `lottery_guess.py`     
+- [X] `summarize_scores.py`  
+- [X] `all_positive.py`      
+- [X] `long_str.py`          
+- [X] `currency_convert.py`  
+- [X] `get_department.py'`   
+- [X] `course_enrollment.py` 
+- [X] `contacts.py`          
+- [X] `phone_lookup.py`      
+- [X] `fix_movie_review.py`  
+- [X] `overweight.py`        
+- [X] `find_item_price.py`   
+- [X] `check_identity.py`    
+- [X] `book_your_seat.py`    
+- [X] `boarding_pass_code.py`
+- [X] `process_payment.py`
 
-
-- [ ] `lets_vote.py`       
-- [ ] `in_the_club.py`     
-- [ ] `top_student.py`     
-- [ ] `mind_the_gap.py`    
-- [ ] `is_sublist.py`      
-- [ ] `runner_position.py` 
-- [ ] `folder_count.py`    
-- [ ] `secret_club.py`     
-- [ ] `dicts_in_order.py`  
-- [ ] `they_legit.py`      
+- [X] `lets_vote.py`       
+- [X] `in_the_club.py`     
+- [X] `top_student.py`     
+- [X] `mind_the_gap.py`    
+- [X] `is_sublist.py`      
+- [X] `runner_position.py` 
+- [X] `folder_count.py`    
+- [X] `secret_club.py`     
+- [X] `dicts_in_order.py`  
+- [X] `they_legit.py`      

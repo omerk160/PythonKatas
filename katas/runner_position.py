@@ -2,7 +2,12 @@ def find_runner_position(runners, runner_name):
     """
     Returns the index of the given runner in the list, or -1 if the runner is not found.
     """
+    for i in range (len(runners)):
+        if runner_name in runners[i]:
+            return i+1
 
+    else:
+        return '-1'
 
 # Example usage
 position_1 = find_runner_position(['Alice', 'Bob', 'Charlie', 'David'], 'Charlie')

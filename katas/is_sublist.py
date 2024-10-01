@@ -2,6 +2,13 @@ def is_sublist(l1, l2):
     """
     Returns True if the first list (l1) is contained the second list (l2) lexicographically.
     """
+    sublist_len = len(l2)
+
+    # Iterate over the main list and check for sublist
+    for i in range(len(l1) - sublist_len + 1):
+        if l1[i:i + sublist_len] == l2:
+            return True
+    return False
 
 
 # Example usage

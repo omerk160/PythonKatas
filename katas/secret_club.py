@@ -4,6 +4,8 @@ def secret_club(keys, values):
     - keys: A list of club member names.
     - values: A list of secret codes.
     """
+    club_dict = dict(zip(keys, values))
+    return club_dict
 
 
 # Example usage

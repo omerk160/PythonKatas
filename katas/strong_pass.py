@@ -1,7 +1,21 @@
+import re
 def strong_pass(password):
     """
     This function returns True if the given password is strong enough
     """
+    # Criteria for a strong password
+    if len(password) < 6:
+        return False
+    if not re.search(r'\d', password):  # Check for at least one digit
+        return False
+    if not re.search(r'[a-z]', password):  # Check for at least one lowercase letter
+        return False
+    if not re.search(r'[A-Z]', password):  # Check for at least one uppercase letter
+        return False
+    if not re.search(r'[!@#$%^&*()\-\+]', password):  # Check for at least one special character
+        return False
+
+    return True
 
 
 

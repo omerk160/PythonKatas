@@ -105,15 +105,15 @@ _Kata_ is a Japanese word (型 or 形) meaning "form". It refers to a detailed c
 - [X] `dicts_in_order.py`  
 - [X] `they_legit.py`      
 
-- [ ] `count_even_numbers.py`
-- [ ] `do_twice.py`          
-- [ ] `list_rotation.py`     
-- [ ] `time_me.py`           
-- [ ] `monotonic_array.py`   
-- [ ] `prime_num.py`
-- [ ] `seven_boom.py`
-- [ ] `strong_pass.py`       
-- [ ] `merge_sorted_lists.py`
-- [ ] `best_student.py`
-- [ ] `pair_match.py`
-- [ ] `merge_dict.py`        
+- [X] `count_even_numbers.py`
+- [X] `do_twice.py`          
+- [X] `list_rotation.py`     
+- [X] `time_me.py`           
+- [X] `monotonic_array.py`   
+- [X] `prime_num.py`
+- [X] `seven_boom.py`
+- [X] `strong_pass.py`       
+- [X] `merge_sorted_lists.py`
+- [X] `best_student.py`
+- [X] `pair_match.py`
+- [X] `merge_dict.py`        

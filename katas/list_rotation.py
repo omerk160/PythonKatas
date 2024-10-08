@@ -2,6 +2,10 @@ def rotate_list(lst, n):
     """
     Rotates the list 'lst' by 'n' positions to the right.
     """
+    n = n % len(lst)
+
+    # Slice the list to rotate it
+    return lst[-n:] + lst[:-n]
 
 
 

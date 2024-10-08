@@ -11,15 +11,15 @@ def capitalize_full_name(firstname, lastname):
 
 
 def do_twice(func, *args):
-    """
-    Applies the given function to the provided arguments and returns the result.
-    """
+    result1 = func(*args)
+    result2 = func(*args)
+    return result1, result2
 
 
 # Example usage
 print(do_twice(add, 3, 4))  # 7, 7 expected
 print(do_twice(square, 5))  # 25, 25 expected
-print(do_twice(capitalize_full_name, "john", 'doe'))  # 'John Doe', 'John Doe' expected
+print(do_twice(capitalize_full_name, "john ", 'doe'))  # 'John Doe', 'John Doe' expected
 
 
 """

@@ -24,7 +24,7 @@ class Car:
         if not self.rented:
             raise RuntimeError("The car is not rented, cannot return it.")
         self.rented = False
-        print ('car returned')
+        return 'car returned'
 
     def is_rented(self):
         return self.rented

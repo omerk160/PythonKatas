@@ -26,8 +26,7 @@ class Dog:
         self.position = "jumping"
 
     def bark(self, n=2):
-        for _ in range(n):
-            print("Woof!")
+            print("Woof! " * n)
 
     def describe(self):
         print(f"I'm {self.name}, a {self.breed}. I'm {self.position}.")

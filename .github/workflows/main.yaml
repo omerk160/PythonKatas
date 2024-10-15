@@ -1,42 +1,68 @@
-name: Trigger Kata Tests
+name: Test Katas
 
 on:
   push:
     branches:
       - main
-#    paths:
-#      - 'katas/**'
+
+permissions:
+  contents: write
 
 jobs:
-  get-katas-to-test:
+  LintTest:
     runs-on: ubuntu-latest
-    outputs:
-      changed_katas: ${{ steps.katas_to_test.outputs.katas }}
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
-      - name: Find Katas to test
-        id: katas_to_test
+      - name: Linting Test
+        working-directory: katas
         run: |
-          CHANGED_KATAS=$(git diff --name-only origin/main HEAD | grep '^katas/' | uniq)
-          if [ -z "$CHANGED_KATAS" ]; then
-            echo "No katas have changed."
-            echo "::set-output name=katas::[]"
-          else
-            echo "Changed katas: $CHANGED_KATAS"
-            KATAS_JSON=$(echo $CHANGED_KATAS | jq -R -s 'split("\n")')
-            echo "::set-output name=katas::$KATAS_JSON"
-          fi
+          pip install pylint
+          pylint *.py || true
 
-  test-katas:
-    needs: get-katas-to-test
+  ListKatas:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        kata_name: ${{ fromJson(needs.get-katas-to-test.outputs.changed_katas) }}
+    outputs:
+      tests: ${{ steps.kata_tests.outputs.tests }}
     steps:
-      - name: Trigger general kata test workflow
-        uses: ./.github/workflows/test-kata.yaml
-        with:
-          kata_name: ${{ matrix.kata_name }}
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Find Katas to test
+        id: kata_tests
+        working-directory: katas/test
+        run: |  
+          kata_json=$(ls test_*.py | jq -R -s -c 'split("\n")[:-1]')
+          echo "Katas: $kata_json"
+          echo "tests=$kata_json" >> $GITHUB_OUTPUT
+
+  Test:
+    needs: ListKatas
+    runs-on: ubuntu-latest
+    name: ${{ matrix.kata_name }}
+    strategy:
+      fail-fast: false
+      matrix:
+        kata_name: ${{ fromJson(needs.ListKatas.outputs.tests) }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: unittest run
+        run: |
+          export PYTHONPATH=$PYTHONPATH:$(pwd)
+          cd katas
+          python -m unittest test/${{ matrix.kata_name }}
+
+  StoreTestId:
+    needs: Test
+    runs-on: ubuntu-latest
+    if: always()
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - run: |
+          git config --local user.email "python@katas"
+          git config --local user.name "auto-test"
+          git checkout -b internal/test || git checkout internal/test
+          echo ${GITHUB_RUN_ID} > .test_results_id
+          git add .test_results_id && git commit -m "update run id"
+          git push origin internal/test --force

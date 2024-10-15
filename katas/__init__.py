@@ -1,27 +1,127 @@
-katas = [
+katas = {
+    "intro": [
+        ('hello_world.py', 'function structure'),
+        ('hello_world2.py', 'str type, concat'),
+        ('numbers_division.py', 'int, float'),
+        ('personalized_hello_world.py', 'func args'),
+        ('age_message_fix.py', 'dynamically typed, + operator'),
+        ('get_seconds.py', 'math'),
+        ('get_century.py', 'math'),
+        ('bad_average.py', 'parentheses'),
+        ('calculator1.py', 'built-in funcs, func call'),
+        ('calculator2.py', 'convert types'),
+        ('tax_calc.py', 'multiple fuc args, scope'),
+        ('bad_function.py', 'troubleshoot'),
+    ]
+    ,
+    "controlflow": [
+        ('fill_a_cab.py', 'simple if'),
+        ('time_convertor.py', 'elif and ==='),
+        ('is_even.py', 'bool'),
+        ('can_drive.py', 'and'),
+        ('can_drive2.py', 'or operators'),
+        ('assess_temperature.py', 'if else elif'),
+        ('my_abs.py', 'abs'),
+        ('shopping_list.py', 'list'),
+        ('last_one.py', 'list index'),
+        ('sandwich_ingredients.py', 'slice'),
+        ('every_second_word.py', 'slice with jumps'),
+        ('recent_messages.py', 'slice to ends'),
+        ('get_username.py', 'slice of string'),
+        ('shopping_list2.py', 'list append'),
+        ('log_message.py', 'print vs return'),
+        ('', 'default args'),
+        ('mailing_list.py', 'concat and split'),
+        ('grader.py', 'multiple returns'),
+        ('find_student.py', 'in operator'),
+        ('is_word_absent.py', 'not in'),
+        ('is_valid_password', 'len built-in'),
+        ('is_earlier.py', 'compare lists'),
+        ('num_of_digits.py', 'int to str conversion'),
+        ('is_palindrome.py', 'reverse string'),
+        ('has_pattern.py', 'slice in if'),
+        ('is_subscriber_matching.py', 'case-insensitive str'),
+        ('get_first_n_words.py', 'split, join'),
+        ('clean_text.py', 'replace'),
+        ('get_user_info.py', 'tuple, return multiple values'),
+        ('fraction_of_float.py', 'type conversion'),
+        ('start_end.py', 'slice, str, user input'),
+        ('verbing.py', 'str endswith'),
+    ]
+    ,
+    "loops": [
+        ('print_list_elements.py', 'for loop'),
+        ('total_expense.py', 'for with aggregator variable'),
+        ('min_max.py', 'max, min implementation with for loops'),
+        ('mailing_list2.py', 'override element in a list'),
+        ('is_prime.py', 'built in: range'),
+        ('list_diff.py', 'for loop with range() index'),
+        ('under_18.py', 'counter outside loop'),
+        ('even_sublist.py', 'for loop'),
+        ('word_count.py', 'word count'),
+        ('sum_even_numbers.py', 'fix error (range(lst) instead range(len(lst)))'),
+        ('app_health.py', 'global variable'),
+        ('max_difference.py', 'for in for'),
+        ('name_pair.py', 'all pairs in a list (for in for)'),
+        ('validate_age.py', 'user input validation, isinstance()'),
+        ('is_unique_str.py', 'set: is unique str'),
+        ('reformat_phone.py', 'reformat phone number: isdigit()'),
+        ('swap_in_list.py', 'swap'),
+        ('partial_list.py', 'partial list'),
+        ('lottery_guess.py', 'import random'),
+        ('summarize_scores.py', 'function declaration'),
+        ('all_positive.py', 'all() built in'),
+        ('long_str.py', 'any() built in'),
+    ]
+    ,
+    "datastructures": [
+        ('currency_convert.py', 'dict intro: convert currency'),
+        ('get_department.py', 'get value by key'),
+        ('course_enrollment.py', 'working with two dicts'),
+        ('contacts.py', 'keys assign, dict mutability'),
+        ('phone_lookup.py', 'dict: in operator, get()'),
+        ('fix_movie_review.py', 'check if key is in dict (fix common error)'),
+        ('overweight.py', 'dict.items()'),
+        ('find_item_price.py', 'nested dict'),
+        ('check_identity.py', 'the `is` operator'),
+        ('book_your_seat.py', 'is None'),
+        ('boarding_pass_code.py', 'f string'),
+        ('process_payment.py', 'type() or isinstance(): multiple input type for an argument'),
+        ('lets_vote.py', 'increase counter in dict (add if not exist)'),
+        ('in_the_club.py', 'check if key exist in dict'),
+        ('top_student.py', 'lambda introduced'),
+        ('mind_the_gap.py', 'str.count() manually'),
+        ('is_sublist.py', 'sublist check'),
+        ('runner_position.py', 'list.index() manually'),
+        ('folder_count.py', 'path manipulation'),
+        ('secret_club.py', 'zip() - dict from two lists'),
+        ('dicts_in_order.py', 'list of tuples from dict'),
+        ('they_legit.py', 'list of dict, lambda functions'),
+        ('count_even_numbers.py', 'return terminates the function (bug)'),
+        ('do_twice.py', 'pointer to function'),
+        ('list_rotation.py', 'list rotation'),
+        ('time_me.py', 'import time'),
+        ('monotonic_array.py', ''),
+        ('prime_num.py', ''),
+        ('seven_boom.py', ''),
+        ('strong_pass.py', 're'),
+        ('merge_sorted_lists.py', 'sort and sorted'),
+        ('best_student.py', ''),
+        ('pair_match.py', ''),
+        ('merge_dict.py', 'merge dicts'),
+    ]
+    ,
+    "io_errorhandling": [
+        ('file_exceptions.py', ''),
+        ('most_frequent_name.py', ''),
+    ]
+    ,
+    "classes": [
+        ('car.py', ''),
+        ('dog.py', ''),
+        ('cache_list.py', ''),
+        ('simple_queue.py', ''),
+        ('tree.py', ''),
+    ]
 
-    # functions, math
-
-    'hello_world.py',                   # function structure
-    'hello_world2.py',                  # str type, concat
-    'numbers_division.py',               # int and float types
-    'personalized_hello_world.py',      # function arguments
-    'age_message_fix.py',                   # dynamically typed, can't concat str + int.
-    'get_seconds.py',                   # math operators
-    'get_century.py',                   # math operators
-    'bad_average.py',                   # parentheses in math
-    'calculator1.py',                   # built in functions type function call
-    'calculator2.py',                   # convert types calculator2 str + str
-    'tax_calc.py',                      # function with multiple arguments, variable scope
-    'bad_function.py',                  # function troubleshoot
-
-
-    # if simple
-
-    'fill_a_cab.py',                     # simple if  # TODO explain syntax
-    'time_convertor.py',                 # if, ==, elif
-    'is_even.py',                        # bool
-    'can_drive.py',                      # and
-    'can_drive2.py',                     # or operators
-    'assess_temperature.py',             # if, elif, else
-]
+}

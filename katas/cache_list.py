@@ -23,16 +23,18 @@ class CacheList(list):
     """
     def __init__(self, cache_capacity=5):
         super().__init__()
-        pass
+        self._cache_capacity = cache_capacity
 
     def append(self, element):
-        pass
+        if len(self) >= self._cache_capacity:  # If the list exceeds the cache capacity
+            self.pop(0)  # Remove the first (oldest) element
+        super().append(element)
 
     def cache_capacity(self):
         """
         Return the cache capacity
         """
-        pass
+        return self._cache_capacity
 
 
 if __name__ == '__main__':

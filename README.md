@@ -120,9 +120,9 @@ _Kata_ is a Japanese word (型 or 形) meaning "form". It refers to a detailed c
 - [X] `most_frequent_name.py`
 - [X] `car.py`
 - [X] `dog.py`
-- [ ] `cache_list.py`
-- [ ] `simple_queue.py`
-- [ ] `tree.py`
+- [X] `cache_list.py`
+- [X] `simple_queue.py`
+- [X] `tree.py`
 - 
 
 

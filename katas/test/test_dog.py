@@ -37,4 +37,4 @@ class TestDog(unittest.TestCase):
             output = mock_stdout.getvalue()
 
         expected_description = f"I'm {self.my_dog.name}, a {self.my_dog.breed}. I'm {self.my_dog.position}"
-        self.assertEqual(output.strip(), expected_description)
+        self.assertEqual(output.strip(), expected_description)#

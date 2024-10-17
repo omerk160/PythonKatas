@@ -29,7 +29,7 @@ class Dog:
         print("\n".join(["Woof! Woof!"] * n))
 
     def describe(self):
-        print(f"I'm {self.name}, a {self.breed}. I'm {self.position}", end="")
+        print(f"I'm {self.name}, a {self.breed}. I'm {self.position}\n")
 
 
 if __name__ == "__main__":

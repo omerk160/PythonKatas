@@ -45,4 +45,4 @@ if __name__ == "__main__":
 
     # Make the dog jump and describe again
     my_dog.jump()
-    my_dog.describe()  # I'm Buddy, a Golden Retriever. I'm jumping
+    my_dog.describe()  # I'm Buddy, a Golden Retriever. I'm jumpin

@@ -1,15 +1,14 @@
 import unittest
 from io import StringIO
-from unittest.mock import patch
+from unittest.mock import patch, mock_open
 from katas.file_exceptions import file_exceptions
 import os
-
 
 workdir = os.getcwd()
 BASE_PATH = '../files' if workdir.endswith('test') else 'files'
 
-
 class TestFileExceptions(unittest.TestCase):
+
     @patch('sys.stdout', new_callable=StringIO)
     def test_handle_file_not_found_error(self, mock_stdout):
         file_exceptions(f'{BASE_PATH}/nonexistent_file.txt')
@@ -22,12 +21,14 @@ class TestFileExceptions(unittest.TestCase):
         self.assertIn("PermissionError", mock_stdout.getvalue())
 
     @patch('sys.stdout', new_callable=StringIO)
-    def test_handle_is_a_directory_error(self, mock_stdout):
+    @patch('builtins.open', side_effect=IsADirectoryError("Is a directory"))
+    def test_handle_is_a_directory_error(self, mock_open, mock_stdout):
         file_exceptions(f'{BASE_PATH}/')
         self.assertIn("IsADirectoryError", mock_stdout.getvalue())
 
     @patch('sys.stdout', new_callable=StringIO)
-    def test_handle_file_exists_error(self, mock_stdout):
+    @patch('builtins.open', side_effect=FileExistsError("File exists"))
+    def test_handle_file_exists_error(self, mock_open, mock_stdout):
         file_exceptions(f'{BASE_PATH}/someotherfile', op='x')
         self.assertIn("FileExistsError", mock_stdout.getvalue())
 

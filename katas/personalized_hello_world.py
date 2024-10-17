@@ -1,9 +1,9 @@
 def greeting(name):
-    name = 'David'
+    name = 'Alice'
     return "hello" +" "+ name
 
 
-greeting_msg = greeting('David')
+greeting_msg = greeting('Alice')
 print(greeting_msg)  # "hello David" should be printed
 
 """

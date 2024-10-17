@@ -1,7 +1,7 @@
 def create_greeting():
     greeting = 'Hello'
-    name = 'World'
-    return greeting + "," + name + "!"
+    name = 'world'
+    return greeting + ", " + name + "!"
 
 
 result = create_greeting()

@@ -32,6 +32,7 @@ class Dog:
         print(f"I'm {self.name}, a {self.breed}. I'm {self.position}\n")
 
 
+
 if __name__ == "__main__":
     # Create a dog with the default position as "sitting"
     my_dog = Dog("Buddy", "Golden Retriever")

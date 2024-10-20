@@ -69,6 +69,11 @@ class Tree:
         heights = [self.height(child) for child in node.children]
         return 1 + max(heights)
 
+class BinaryNode(Node):
+    def __init__(self, value):
+        super().__init__(value)
+        self.left = None
+        self.right = None
 
 class BinaryTree(Tree):
     """
@@ -76,41 +81,66 @@ class BinaryTree(Tree):
     """
 
     def __init__(self, root_node_value):
-        super().__init__(root_node_value)
+        self.root = BinaryNode(root_node_value)  # Use BinaryNode for binary tree
 
     def set_left_node(self, value, parent_value):
         """
-        Sets a new left node for a given parent node value.
+        Sets or replaces a left node for a given parent node value.
         Returns a pointer to the newly added node.
         """
         parent_node = self.get_node(parent_value)
         if parent_node is None:
             raise RuntimeError(f"Parent node {parent_value} not found.")
 
-        if len(parent_node.children) > 0:
-            # If left child already exists, override it
-            parent_node.children[0] = Node(value)  # Replace left child
-        else:
-            parent_node.add_child(Node(value))
-
-        return parent_node.children[0]
+        new_node = BinaryNode(value)
+        parent_node.left = new_node  # Replace or set left child
+        return new_node
 
     def set_right_node(self, value, parent_value):
         """
-        Sets a new right node for a given parent node value.
+        Sets or replaces a right node for a given parent node value.
         Returns a pointer to the newly added node.
         """
         parent_node = self.get_node(parent_value)
         if parent_node is None:
             raise RuntimeError(f"Parent node {parent_value} not found.")
 
-        if len(parent_node.children) > 1:
-            # If right child already exists, override it
-            parent_node.children[1] = Node(value)  # Replace right child
-        else:
-            parent_node.add_child(Node(value))
+        new_node = BinaryNode(value)
+        parent_node.right = new_node  # Replace or set right child
+        return new_node
 
-        return parent_node.children[-1]  # Return the rightmost child
+    def get_node(self, value, node=None):
+        """
+        Overriding to traverse the binary tree structure.
+        """
+        if node is None:
+            node = self.root
+
+        if node.value == value:
+            return node
+
+        left_result = self.get_node(value, node.left) if node.left else None
+        if left_result:
+            return left_result
+
+        right_result = self.get_node(value, node.right) if node.right else None
+        return right_result
+
+    def height(self, node=None):
+        """
+        Returns the height of the binary tree.
+        """
+        if node is None:
+            node = self.root
+
+        if not node.left and not node.right:  # If there are no children, it's a leaf node.
+            return 1
+
+        left_height = self.height(node.left) if node.left else 0
+        right_height = self.height(node.right) if node.right else 0
+
+        return 1 + max(left_height, right_height)
+
 
 
 if __name__ == "__main__":

@@ -1,7 +1,6 @@
 import unittest
 from katas.tree import Tree, BinaryTree
 
-
 class TestTree(unittest.TestCase):
     def test_tree_creation(self):
         t = Tree('A')
@@ -31,35 +30,35 @@ class TestTree(unittest.TestCase):
 
     def test_binary_tree_creation(self):
         bt = BinaryTree('A')
-        bt.set_left_node('B', 'A')  # Removed parent=
-        bt.set_right_node('C', 'A')  # Removed parent=
-        bt.set_left_node('D', 'B')  # Removed parent=
-        bt.set_right_node('E', 'C')  # Removed parent=
-        bt.set_left_node('F', 'C')  # Removed parent=
+        bt.set_left_node('B', 'A')  # 'B' is the left child of 'A'
+        bt.set_right_node('C', 'A')  # 'C' is the right child of 'A'
+        bt.set_left_node('D', 'B')  # 'D' is the left child of 'B'
+        bt.set_left_node('E', 'C')  # 'E' is the left child of 'C'
+        bt.set_right_node('F', 'C')  # 'F' is the right child of 'C'
 
+        # Assert root node
         self.assertEqual(bt.root.value, 'A')
-        self.assertEqual(len(bt.root.children), 2)
 
-        self.assertIn('B', [c.value for c in bt.root.children])
-        self.assertIn('C', [c.value for c in bt.root.children])
+        # Check children of root node
+        self.assertIsNotNone(bt.root.left)  # Left child should exist
+        self.assertIsNotNone(bt.root.right)  # Right child should exist
+        self.assertEqual(bt.root.left.value, 'B')
+        self.assertEqual(bt.root.right.value, 'C')
 
-        for c in bt.root.children:
-            if c.value == 'B':
-                self.assertEqual(len(c.children), 1)
-                self.assertEqual(c.children[0].value, 'D')
-            elif c.value == 'C':
-                self.assertEqual(len(c.children), 2)
-                self.assertIn('E', [c2.value for c2 in c.children])
-                self.assertIn('F', [c2.value for c2 in c.children])
+        # Check children of 'B'
+        self.assertIsNotNone(bt.root.left.left)
+        self.assertEqual(bt.root.left.left.value, 'D')
 
-        # Add another right node to 'C', overriding the existing one ('E')
-        bt.set_right_node('G', 'C')  # Removed parent=
+        # Check children of 'C'
+        self.assertIsNotNone(bt.root.right.left)
+        self.assertIsNotNone(bt.root.right.right)
+        self.assertEqual(bt.root.right.left.value, 'E')  # Now 'E' should be the left child of 'C'
+        self.assertEqual(bt.root.right.right.value, 'F')  # 'F' should be the right child of 'C'
 
-        for c in bt.root.children:
-            if c.value == 'C':
-                self.assertEqual(len(c.children), 2)
-                self.assertIn('G', [c2.value for c2 in c.children])
-                self.assertIn('F', [c2.value for c2 in c.children])
+        # Add another right node to 'C', overriding the existing one ('F')
+        bt.set_right_node('G', 'C')  # Override right child with 'G'
+
+        self.assertEqual(bt.root.right.right.value, 'G')  # Now 'G' should replace 'F'
 
     def test_binary_tree_height(self):
         bt = BinaryTree('A')

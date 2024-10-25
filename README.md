@@ -123,12 +123,11 @@ _Kata_ is a Japanese word (型 or 形) meaning "form". It refers to a detailed c
 - [X] `cache_list.py`
 - [X] `simple_queue.py`
 - [X] `tree.py`
-- 
 
 
 
-- [ ] `sorted_dict.py`
-- [ ] `youtube.py`
-- [ ] `bash.py`
-- [ ] `request_retry.py`
-- [ ] `request_timeout.py`
+- [X] `sorted_dict.py`
+- [X] `youtube.py`
+- [X] `bash.py`
+- [X] `request_retry.py`
+- [X] `request_timeout.py`

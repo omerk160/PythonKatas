@@ -22,27 +22,42 @@ class SortedDict(dict):
 
     def __init__(self):
         super().__init__()
-        pass
+        self._sorted_keys = []
 
     def __setitem__(self, key, value):
-        pass
+        # Insert the item normally
+        super().__setitem__(key, value)
 
-    def items(self):
-        raise NotImplemented()
+        # Maintain the sorted list of keys
+        if key not in self._sorted_keys:
+            self._sorted_keys.append(key)
+            self._sorted_keys.sort()
 
-    def values(self):
-        raise NotImplemented()
+    def __delitem__(self, key):
+        # Remove the item and update the sorted key list
+        super().__delitem__(key)
+        self._sorted_keys.remove(key)
 
     def keys(self):
-        raise NotImplemented()
+        return iter(self._sorted_keys)
+
+    def values(self):
+        return (self[key] for key in self._sorted_keys)
+
+    def items(self):
+        return ((key, self[key]) for key in self._sorted_keys)
 
 
 if __name__ == '__main__':
 
-    s_dict = SortedDict()
-    s_dict['a'] = None
-    s_dict['t'] = None
-    s_dict['h'] = None
-    s_dict['q'] = None
-    s_dict['b'] = None
-    print(s_dict.items())
+    if __name__ == '__main__':
+        s_dict = SortedDict()
+        s_dict['banana'] = 'ccc'
+        s_dict['apple'] = 'aaa'
+        s_dict['orange'] = 'bbb'
+
+
+
+    print(list(s_dict.keys()))  # ['apple', 'banana', 'orange']
+    print(list(s_dict.values()))  # ['aaa', 'ccc', 'bbb']
+    print(list(s_dict.items()))  # [('apple', 'aaa'), ('banana', 'ccc'), ('orange', 'bbb')]

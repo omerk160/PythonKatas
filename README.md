@@ -131,3 +131,6 @@ _Kata_ is a Japanese word (型 or 形) meaning "form". It refers to a detailed c
 - [X] `bash.py`
 - [X] `request_retry.py`
 - [X] `request_timeout.py`
+
+
+DONE!

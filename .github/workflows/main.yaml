@@ -28,11 +28,11 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      - name: Find Katas to test
+      - name: List Katas to test
         id: kata_tests
         working-directory: katas/test
         run: |  
-          kata_json=$(ls test_*.py | jq -R -s -c 'split("\n")[:-1]')
+          kata_json=$(ls test_*.py | sed 's/^test_//' | jq -R -s -c 'split("\n")[:-1]')
           echo "Katas: $kata_json"
           echo "tests=$kata_json" >> $GITHUB_OUTPUT
 
@@ -50,7 +50,7 @@ jobs:
         run: |
           export PYTHONPATH=$PYTHONPATH:$(pwd)/katas
           filename=${{ matrix.kata_name }}
-          python -m unittest katas.test.${filename%.py}
+          python -m unittest katas.test.test_${filename%.py}
 
   StoreTestId:
     needs: Test

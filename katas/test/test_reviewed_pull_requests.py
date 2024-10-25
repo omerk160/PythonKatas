@@ -1,7 +1,7 @@
 import unittest
 from datetime import datetime, timedelta
 from unittest.mock import patch
-from python_katas.reviewed_pull_requests import reviewed_pull_requests
+from katas.reviewed_pull_requests import reviewed_pull_requests
 import json
 
 mock_response = [

@@ -1,6 +1,5 @@
 import unittest
-from python_katas.sorted_dict import SortedDict
-
+from katas.sorted_dict import SortedDict  # Update import path if necessary
 
 class TestSortedDictL2(unittest.TestCase):
     def test_initialization(self):
@@ -24,7 +23,6 @@ class TestSortedDictL2(unittest.TestCase):
         s_dict['q'] = None
         s_dict['b'] = None
         self.assertEqual(list(s_dict.items()), [('a', None), ('b', None), ('h', None), ('q', None), ('t', None)])
-
 
 if __name__ == '__main__':
     unittest.main()
